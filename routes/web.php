@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/checkRedditFIle', 'SubredditDataController@checkRedditFIle');
+Route::get('/getRedditFIle', 'SubredditDataController@getRedditFIle');
+Route::get('/fileToDB', 'SubredditDataController@fileToDB');
