@@ -175,6 +175,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\SubredditDataServiceProvider::class,
+        App\Providers\SubredditServiceProvider::class,
+        App\Providers\SubredditPostServiceProvider::class,
 
     ],
 

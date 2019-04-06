@@ -17,3 +17,6 @@ Route::get('/', function () {
 Route::get('/checkRedditFIle', 'SubredditDataController@checkRedditFIle');
 Route::get('/getRedditFIle', 'SubredditDataController@getRedditFIle');
 Route::get('/fileToDB', 'SubredditDataController@fileToDB');
+
+Route::get('/showSubreddit', 'SubredditController@showSubreddit');
+Route::get('/showSubredditPost/{any}', 'SubredditPostController@showSubredditPost');
