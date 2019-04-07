@@ -24,6 +24,15 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <form method="post" action="{{action('SubredditController@filter')}}" enctype="multipart/form-data" >
+                    @csrf
+                    <tr>
+                        <td><input type="text" class="form-control" name="subreddit_id" value=""></td>
+                        <td><input type="text" class="form-control" name="subreddit" value=""></td>
+                        <td><input type="text" class="form-control" name="noOfPost" value=""></td>
+                        <td><button type="submit" class="btn btn-success">Search</button></td>
+                    </tr>
+                    </form>
                     @foreach($data as $subreddit)
                     <tr>
                         <td>{{$subreddit->subreddit_id}}</td>
@@ -38,7 +47,9 @@
                     @endforeach
                 </tbody>
             </table>
-            {{ $data->links()}}
+            @if(!is_array($data))
+                {{ $data->links()}}
+            @endif
         </div>
         
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
